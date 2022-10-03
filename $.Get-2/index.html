@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button> Apretame </button>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('button').click(function(event) {
+
+          $.get('datos.txt', function(dato, status, xhr){
+            console.log("Mensaje: " + dato + "\n Status " + status + "\n " + xhr.status);
+          });
+
+        });
+      });
+
+    </script>
+
+  </body>
+</html>

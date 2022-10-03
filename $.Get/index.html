@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="html">
+
+    <section id="php">
+      <h1 >
+
+      </h1>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(function () {
+
+        $.get ('ejemplo.html',function(datahtml) {
+          // lee html y lo inserta en <body id=html>
+          $('#html').text(datahtml);
+          console.log(datahtml);
+        });
+
+        $.get('ejemplo.php', {nombre: "Carlitos"}, function(dataphp) {
+          // lee php y lo inserta en <h1 id=php >
+          $('#php').text(dataphp);
+          console.log(dataphp);
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="importarXML"> Trae el XML</button>
+    <table id="cds">
+      <thead>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Precio</th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#importarXML').click(function() {
+              $.ajax({
+                url: 'https://www.w3schools.com/xml/simple.xml',
+                type: 'GET',
+                dataType: 'xml',
+              })
+              .done(function(data) {
+                console.log( $(data).find('food').text() );
+              });
+
+
+
+
+
+            });
+        });
+    </script>
+  </body>
+</html>

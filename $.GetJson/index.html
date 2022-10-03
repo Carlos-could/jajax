@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="submit" value="ejecutar" id="ejecutar" name="">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+      $(function(){
+        $('#ejecutar').click(function() {
+          console.log("perro");
+          $.getJSON(
+            //uno
+            'ejemplo.php',
+            //dos
+            {
+            nombre: "Carlos",
+            metodo: "GET"
+            },
+            //tres
+            function(data) {
+              $.each(data, function(i, value){
+                console.log(i + " " + value);
+              });
+            }//acaba tres
+          );//acaba json
+
+          });
+        });
+
+        //$.getJSON('/path/to/file', {param1: 'value1'}, function(json, textStatus) {
+
+
+    </script>
+
+
+  </body>
+</html>
