@@ -19,11 +19,11 @@
 
       $(function () {
 
-        $.get ('ejemplo.html',function(datahtml) {
-          // lee html y lo inserta en <body id=html>
-          $('#html').text(datahtml);
-          console.log(datahtml);
-        });
+        // $.get ('ejemplo.html',function(datahtml) {
+        //   // lee html y lo inserta en <body id=html>
+        //   $('#html').text(datahtml);
+        //   console.log(datahtml);
+        // });
 
         $.get('ejemplo.php', {nombre: "Carlitos"}, function(dataphp) {
           // lee php y lo inserta en <h1 id=php >
